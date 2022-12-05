@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/monorepo/src",
+  "monorepo": true,
+  "root": "apps/monorepo",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/monorepo/tsconfig.app.json"
+  },
+  "projects": {
+    "monorepo": {
+      "type": "application",
+      "root": "apps/monorepo",
+      "entryFile": "main",
+      "sourceRoot": "apps/monorepo/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/monorepo/tsconfig.app.json"
+      }
+    },
+    "y": {
+      "type": "application",
+      "root": "apps/y",
+      "entryFile": "main",
+      "sourceRoot": "apps/y/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/y/tsconfig.app.json"
+      }
+    },
+    "producer": {
+      "type": "application",
+      "root": "apps/producer",
+      "entryFile": "main",
+      "sourceRoot": "apps/producer/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/producer/tsconfig.app.json"
+      }
+    },
+    "consumer": {
+      "type": "application",
+      "root": "apps/consumer",
+      "entryFile": "main",
+      "sourceRoot": "apps/consumer/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/consumer/tsconfig.app.json"
+      }
+    }
+  }
+}
